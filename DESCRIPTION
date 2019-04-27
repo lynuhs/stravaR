@@ -7,12 +7,12 @@ Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
-Depends: 
-    plyr (>= 1.0)
-    rjson (>= 1.0)
-    httr (>= 1.0)
-    assertthat (>= 1.0)
-    httpuv (>= 1.0)
+Imports: 
+    plyr
+    rjson
+    httr
+    assertthat
+    httpuv
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1.9000
