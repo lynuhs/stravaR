@@ -9,6 +9,7 @@
 #' @import httr
 #' @import assertthat
 #' @import plyr
+#' @import rjson
 #'
 #' @export
 strava_activities <- function(){
