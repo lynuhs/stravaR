@@ -6,13 +6,6 @@
 \usage{
 strava_activities()
 }
-\arguments{
-\item{scope}{Name of your developer app}
-
-\item{token}{The Client ID of your developer app}
-
-\item{app_secret}{The secret for your developer app}
-}
 \description{
 Get activities from the authenticated user as a data frame
 }

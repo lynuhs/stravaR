@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556436990436.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BBD9A1A9",
+    "lastKnownWriteTime" : 1556443002,
+    "last_content_update" : 1556443002980,
+    "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_activities.R",
+    "project_path" : "R/strava_activities.R",
+    "properties" : {
+        "cursorPosition" : "32,0",
+        "scrollLine" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
