@@ -12,6 +12,8 @@
 #'
 #'
 #' @export
+#' @examples
+#' strava_laps(12345678, lapType = c("custom", "standard"))
 strava_laps <- function(data, lapType = "custom"){
   if(!strava_check_existing_token()){
     return(invisible(FALSE))

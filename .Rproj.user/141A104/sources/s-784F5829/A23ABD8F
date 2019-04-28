@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "A23ABD8F",
-    "lastKnownWriteTime" : 1556436866,
-    "last_content_update" : 1556436866005,
+    "lastKnownWriteTime" : 1556446046,
+    "last_content_update" : 1556446046737,
     "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_auth.R",
     "project_path" : "R/strava_auth.R",
     "properties" : {
-        "cursorPosition" : "347,0",
-        "scrollLine" : "318",
+        "cursorPosition" : "195,26",
+        "scrollLine" : "178",
         "tempName" : "Untitled1"
     },
     "read_only" : false,

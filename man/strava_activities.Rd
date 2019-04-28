@@ -4,8 +4,14 @@
 \alias{strava_activities}
 \title{Get activities from Strava}
 \usage{
-strava_activities()
+strava_activities(dateRange)
+}
+\arguments{
+\item{dateRange}{Between what dates the data should be collected. Must be in date format! c(date1, date2)}
 }
 \description{
 Get activities from the authenticated user as a data frame
+}
+\examples{
+strava_activities(dateRange = c(date1, date2))
 }

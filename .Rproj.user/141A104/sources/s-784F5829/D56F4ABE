@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1556443005956.000,
+    "created" : 1556446305706.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "473B82CB",
-    "lastKnownWriteTime" : 1556445704,
-    "last_content_update" : 1556445704805,
-    "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_laps.R",
-    "project_path" : "R/strava_laps.R",
+    "id" : "D56F4ABE",
+    "lastKnownWriteTime" : 1556448305,
+    "last_content_update" : 1556448305126,
+    "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_customApi.R",
+    "project_path" : "R/strava_customApi.R",
     "properties" : {
-        "cursorPosition" : "21,27",
+        "cursorPosition" : "29,0",
         "scrollLine" : "0",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 6,
+    "relative_order" : 7,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

@@ -14,3 +14,6 @@ strava_laps(data, lapType = "custom")
 \description{
 Get laps information by the specific id or vector of ids
 }
+\examples{
+strava_laps(12345678, lapType = c("custom", "standard"))
+}

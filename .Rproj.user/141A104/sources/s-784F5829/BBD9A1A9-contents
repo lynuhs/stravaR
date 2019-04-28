@@ -2,18 +2,32 @@
 #'
 #' Get activities from the authenticated user as a data frame
 #'
+#' @param dateRange Between what dates the data should be collected. Must be in date format! c(date1, date2)
+#'
 #' @import httr
 #' @import assertthat
 #' @import plyr
 #' @import rjson
 #'
 #' @export
-strava_activities <- function(){
+#' @examples
+#' strava_activities(dateRange = c(date1, date2))
+strava_activities <- function(dateRange){
   if(!strava_check_existing_token()){
     return(invisible(FALSE))
+  } else if(missing(dateRange)){
+    stop("dateRange must be set!")
   }
 
-  url <- "https://www.strava.com/api/v3/activities/"
+  if(!is.date(dateRange[1]) | !is.date(dateRange[2])) {
+    stop("dateRange must contain two date variables: c(date1, date2)")
+  } else {
+    start <- as.integer(as.POSIXct(dateRange[1]))
+    end <- as.integer(as.POSIXct(dateRange[2]+1))
+    url <- paste0("https://www.strava.com/api/v3/activities/?after=",start,"&before=",end)
+  }
+
+
   data <- GET(url, config(token = StravaAuth$public_fields$token))
 
   data <- rjson::fromJSON(rawToChar(data$content))

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556448886035.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C50ED02F",
+    "lastKnownWriteTime" : 7020655854461346926,
+    "last_content_update" : 1556448886035,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "a79d04533b794a6fb9583e9e066ca08b",
+        "name" : "df",
+        "title" : "df"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

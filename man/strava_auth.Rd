@@ -19,3 +19,6 @@ strava_auth(app_name = Sys.getenv("STRAVA_APP_NAME"),
 \description{
 Generate a token for the user and the desired scope. The user is sent to the strava authentication page if he/she hasn't given permission to the app yet, else, is sent to the app webpage.
 }
+\examples{
+strava_auth(app_name = "APP Name", app_client_id = "App Client ID", app_secret = "APP Secret", token = NULL, new_user = FALSE)
+}

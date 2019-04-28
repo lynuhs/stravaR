@@ -25,6 +25,8 @@ StravaAuth <- R6::R6Class(
 #' @import assertthat
 #'
 #' @export
+#' @examples
+#' strava_auth(app_name = "APP Name", app_client_id = "App Client ID", app_secret = "APP Secret", token = NULL, new_user = FALSE)
 strava_auth <- function(app_name = Sys.getenv("STRAVA_APP_NAME"), app_client_id = Sys.getenv("STRAVA_APP_ID"), app_secret = Sys.getenv("STRAVA_APP_SECRET"), token = NULL, new_user = FALSE){
   if(app_client_id == "" | app_secret == "" | app_name == ""){
     stop("Need a valid App name, App Client Id and App Secret in order to authorize connection!", call. = FALSE)
@@ -170,9 +172,6 @@ create_strava_token <- function(){
 
   StravaAuth$set("public", "token", strava_token, overwrite=TRUE)
   StravaAuth$set("public", "method", "new_token", overwrite=TRUE)
-
-  StravaAuth$set("public", "userId", rjson::fromJSON(
-    rawToChar(GET("https://www.strava.com/api/v3/athlete", config(token = StravaAuth$public_fields$token))$content))$id)
 
   #strava_token
 }
