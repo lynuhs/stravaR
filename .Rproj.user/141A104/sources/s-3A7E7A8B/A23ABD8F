@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556054001394.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2872920567",
+    "id" : "A23ABD8F",
+    "lastKnownWriteTime" : 1556922833,
+    "last_content_update" : 1556922833426,
+    "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_auth.R",
+    "project_path" : "R/strava_auth.R",
+    "properties" : {
+        "cursorPosition" : "69,3",
+        "scrollLine" : "55",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

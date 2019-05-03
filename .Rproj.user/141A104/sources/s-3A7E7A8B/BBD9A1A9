@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "BBD9A1A9",
-    "lastKnownWriteTime" : 1556445663,
-    "last_content_update" : 1556445663306,
+    "lastKnownWriteTime" : 1556923157,
+    "last_content_update" : 1556923157122,
     "path" : "D:/01_Code/01_GitHub/stravaR/R/strava_activities.R",
     "project_path" : "R/strava_activities.R",
     "properties" : {
-        "cursorPosition" : "35,0",
-        "scrollLine" : "11"
+        "cursorPosition" : "50,0",
+        "scrollLine" : "16"
     },
     "read_only" : false,
     "read_only_alternatives" : [

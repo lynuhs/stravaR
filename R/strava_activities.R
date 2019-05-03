@@ -19,7 +19,7 @@ strava_activities <- function(dateRange){
     stop("dateRange must be set!")
   }
 
-  if(!is.date(dateRange[1]) | !is.date(dateRange[2])) {
+  if(!assertthat::is.date(dateRange[1]) | !assertthat::is.date(dateRange[2])) {
     stop("dateRange must contain two date variables: c(date1, date2)")
   } else {
     start <- as.integer(as.POSIXct(dateRange[1]))
@@ -31,6 +31,10 @@ strava_activities <- function(dateRange){
   data <- GET(url, config(token = StravaAuth$public_fields$token))
 
   data <- rjson::fromJSON(rawToChar(data$content))
+
+  if(length(data) == 0){
+    stop("Coudln't find any data during the chosen time period. Try a different time period.")
+  }
 
   activities <- NULL
 
