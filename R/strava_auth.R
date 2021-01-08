@@ -165,7 +165,7 @@ create_strava_token <- function(){
 
   strava_token <- oauth2.0_token(endpoint = endpoint,
                           app = app,
-                          scope = "public",
+                          scope = "activity:read_all,profile:read_all",
                           cache = cache)
 
   stopifnot(is_legit_token(strava_token))
