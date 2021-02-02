@@ -19,29 +19,41 @@ strava_activities <- function(dateRange){
     stop("dateRange must be set!")
   }
 
+ 
+
   if(!assertthat::is.date(dateRange[1]) | !assertthat::is.date(dateRange[2])) {
     stop("dateRange must contain two date variables: c(date1, date2)")
   } else {
     start <- as.integer(as.POSIXct(dateRange[1]))
     end <- as.integer(as.POSIXct(dateRange[2]+1))
-    url <- paste0("https://www.strava.com/api/v3/activities/?after=",start,"&before=",end, "&per_page=10000")
   }
 
+  moreActivities <- true
+  page <- 1
+  activityList <- NULL
+  while(moreActivities){
+    url <- paste0("https://www.strava.com/api/v3/activities/?after=",start,"&before=",end, "&per_page=100&page=", page)
+    data <- GET(url, config(token = StravaAuth$public_fields$token))
+    data <- rjson::fromJSON(rawToChar(data$content))
+    if(length(data) == 0){
+      moreActivities <- false
+    } else {
+      activityList <- c(activityList, data)
+      page <- page+1
+    }
+  }
+  
 
-  data <- GET(url, config(token = StravaAuth$public_fields$token))
-
-  data <- rjson::fromJSON(rawToChar(data$content))
-
-  if(length(data) == 0){
+  if(length(activityList) == 0){
     stop("Coudln't find any data during the chosen time period. Try a different time period.")
   }
 
   activities <- NULL
 
-  for(i in 1:(length(data))){
-    if (!is.null(unlist(data[[i]]))){
-      act <- data.frame(matrix(unlist(data[[i]]), nrow=1))
-      colnames(act) <- names(unlist(data[[i]]))
+  for(i in 1:(length(activityList))){
+    if (!is.null(unlist(activityList[[i]]))){
+      act <- data.frame(matrix(unlist(activityList[[i]]), nrow=1))
+      colnames(act) <- names(unlist(activityList[[i]]))
       activities <- plyr::rbind.fill(activities, act)
     }
   }
