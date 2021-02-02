@@ -28,7 +28,7 @@ strava_activities <- function(dateRange){
     end <- as.integer(as.POSIXct(dateRange[2]+1))
   }
 
-  moreActivities <- true
+  moreActivities <- TRUE
   page <- 1
   activityList <- NULL
   while(moreActivities){
@@ -36,7 +36,7 @@ strava_activities <- function(dateRange){
     data <- GET(url, config(token = StravaAuth$public_fields$token))
     data <- rjson::fromJSON(rawToChar(data$content))
     if(length(data) == 0){
-      moreActivities <- false
+      moreActivities <- FALSE
     } else {
       activityList <- c(activityList, data)
       page <- page+1
