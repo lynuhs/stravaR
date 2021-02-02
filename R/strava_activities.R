@@ -24,7 +24,7 @@ strava_activities <- function(dateRange){
   } else {
     start <- as.integer(as.POSIXct(dateRange[1]))
     end <- as.integer(as.POSIXct(dateRange[2]+1))
-    url <- paste0("https://www.strava.com/api/v3/activities/?after=",start,"&before=",end)
+    url <- paste0("https://www.strava.com/api/v3/activities/?after=",start,"&before=",end, "&per_page=10000")
   }
 
 
